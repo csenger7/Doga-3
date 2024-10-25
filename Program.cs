@@ -15,7 +15,7 @@ namespace Doga_3
 
             for (int i = 0; i < 7; i++)
             {
-                Console.Write($"Kérem a(z) {i + 1}. nap hőmérsékletét (°C): ");
+                Console.Write($"Kérném a(z) {i + 1}. nap hőmérsékletét (°C): ");
                 while (!double.TryParse(Console.ReadLine(), out homersekletek[i]))
                 {
                     Console.WriteLine("Kérlek, érvényes számot adj meg!");
@@ -27,10 +27,13 @@ namespace Doga_3
             double legmelegebb = homersekletek[0];
             double leghidegebb = homersekletek[0];
 
+
+
             foreach (var h in homersekletek)
             {
                 if (h > legmelegebb) legmelegebb = h;
                 if (h < leghidegebb) leghidegebb = h;
+
             }
 
             Console.WriteLine($"\nA hét átlaghőmérséklete: {atlag:F2} °C");
